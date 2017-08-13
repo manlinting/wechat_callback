@@ -11,7 +11,9 @@ import wechat_utils #will login automaticly
 #wechat_utils.sendmessage()isthe callback class
 #wechat_utils.sendmessage()是keras的回调类，fit时传入callbacklist
 
-nb_sample=64*10000
+wechat_utils.login()
+
+nb_sample=64*10
 batch_size=16
 dim=784
 
@@ -36,4 +38,4 @@ model.compile(optimizer='RMSprop',loss='binary_crossentropy',metrics=['acc','hin
 #==============================================================================
 # Train
 #==============================================================================
-model.fit(x=train_x,y=train_y,batch_size=batch_size,nb_epoch=60,validation_data=(val_x,val_y),callbacks=[wechat_utils.sendmessage(savelog=True,fexten='TEST')])
+model.fit(x=train_x,y=train_y,batch_size=batch_size,nb_epoch=6,validation_data=(val_x,val_y),callbacks=[wechat_utils.sendmessage(savelog=True,fexten='TEST')])
