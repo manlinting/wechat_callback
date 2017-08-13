@@ -37,7 +37,7 @@ def login():
     if 'Windows' in platform.system():
         itchat.auto_login(enableCmdQR=1,hotReload=True)#
     else:
-        itchat.auto_login(enableCmdQR=2,hotReload=True)#
+        itchat.auto_login(enableCmdQR=1,hotReload=True)#
     itchat.dump_login_status()#dump
 #==============================================================================
 # 
